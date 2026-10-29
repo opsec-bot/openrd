@@ -73,9 +73,14 @@ session.set_setting(1, 1).await?;   // write setting index=1 value=1 (City Mode 
 ### Examples
 
 ```sh
+cargo run --example replay # decode sample frames offline — no hardware needed
 cargo run --example scan   # list detectors nearby
 cargo run --example live   # connect to the first one and print alerts
 ```
+
+**No detector on hand?** Start with `replay`. It runs the real decode path over
+recorded/synthetic notification payloads and prints the alerts, so you can see
+the parsers work (and extend them) without any Bluetooth hardware.
 
 ## How it works
 
