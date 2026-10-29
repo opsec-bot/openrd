@@ -1,0 +1,30 @@
+[package]
+name = "openrd"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+description = "Cross-platform Rust client for Bluetooth LE radar detectors (Uniden R4/R8/R9, Valentine One Gen2, Radenso DS1)"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/opsec-bot/openrd"
+readme = "README.md"
+keywords = ["radar-detector", "bluetooth", "ble", "uniden", "valentine"]
+categories = ["hardware-support", "api-bindings"]
+
+[dependencies]
+btleplug = "0.11"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync", "time"] }
+tokio-stream = { version = "0.1", features = ["sync"] }
+futures = "0.3"
+uuid = "1"
+thiserror = "1"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync", "time", "signal"] }
+
+[[example]]
+name = "scan"
+path = "examples/scan.rs"
+
+[[example]]
+name = "live"
+path = "examples/live.rs"
