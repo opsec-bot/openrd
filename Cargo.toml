@@ -28,3 +28,7 @@ path = "examples/scan.rs"
 [[example]]
 name = "live"
 path = "examples/live.rs"
+
+[[example]]
+name = "replay"
+path = "examples/replay.rs"
